@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Listacargoxempelado">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListacargoxempeladoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListacargoxempeladoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listacargon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListacargonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListacargonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsInsertarcargo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="empleado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsInsertarcargoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WsInsertarcargoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Wseditarcargo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="empleado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WseditarcargoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WseditarcargoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarcargo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarcargoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminarcargoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listarempleado">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarempleadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarempleadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listarempresas">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarempresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarempresasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listardepartamentosxempresa">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListardepartamentosxempresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListardepartamentosxempresaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListadepaN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListadepaNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListadepaNResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insertardep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="empresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertardepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertardepResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editardep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="empresa" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editardepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editardepResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminardep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminardepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eliminardepResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListacargoxempeladoSoapIn">
+    <wsdl:part name="parameters" element="tns:Listacargoxempelado" />
+  </wsdl:message>
+  <wsdl:message name="ListacargoxempeladoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListacargoxempeladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListacargonSoapIn">
+    <wsdl:part name="parameters" element="tns:Listacargon" />
+  </wsdl:message>
+  <wsdl:message name="ListacargonSoapOut">
+    <wsdl:part name="parameters" element="tns:ListacargonResponse" />
+  </wsdl:message>
+  <wsdl:message name="WsInsertarcargoSoapIn">
+    <wsdl:part name="parameters" element="tns:WsInsertarcargo" />
+  </wsdl:message>
+  <wsdl:message name="WsInsertarcargoSoapOut">
+    <wsdl:part name="parameters" element="tns:WsInsertarcargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="WseditarcargoSoapIn">
+    <wsdl:part name="parameters" element="tns:Wseditarcargo" />
+  </wsdl:message>
+  <wsdl:message name="WseditarcargoSoapOut">
+    <wsdl:part name="parameters" element="tns:WseditarcargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarcargoSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarcargo" />
+  </wsdl:message>
+  <wsdl:message name="eliminarcargoSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarcargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarempleadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Listarempleado" />
+  </wsdl:message>
+  <wsdl:message name="ListarempleadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarempleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarempresasSoapIn">
+    <wsdl:part name="parameters" element="tns:Listarempresas" />
+  </wsdl:message>
+  <wsdl:message name="ListarempresasSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarempresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListardepartamentosxempresaSoapIn">
+    <wsdl:part name="parameters" element="tns:Listardepartamentosxempresa" />
+  </wsdl:message>
+  <wsdl:message name="ListardepartamentosxempresaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListardepartamentosxempresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListadepaNSoapIn">
+    <wsdl:part name="parameters" element="tns:ListadepaN" />
+  </wsdl:message>
+  <wsdl:message name="ListadepaNSoapOut">
+    <wsdl:part name="parameters" element="tns:ListadepaNResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertardepSoapIn">
+    <wsdl:part name="parameters" element="tns:Insertardep" />
+  </wsdl:message>
+  <wsdl:message name="InsertardepSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertardepResponse" />
+  </wsdl:message>
+  <wsdl:message name="editardepSoapIn">
+    <wsdl:part name="parameters" element="tns:editardep" />
+  </wsdl:message>
+  <wsdl:message name="editardepSoapOut">
+    <wsdl:part name="parameters" element="tns:editardepResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminardepSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminardep" />
+  </wsdl:message>
+  <wsdl:message name="eliminardepSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminardepResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="Listacargoxempelado">
+      <wsdl:input message="tns:ListacargoxempeladoSoapIn" />
+      <wsdl:output message="tns:ListacargoxempeladoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listacargon">
+      <wsdl:input message="tns:ListacargonSoapIn" />
+      <wsdl:output message="tns:ListacargonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsInsertarcargo">
+      <wsdl:input message="tns:WsInsertarcargoSoapIn" />
+      <wsdl:output message="tns:WsInsertarcargoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Wseditarcargo">
+      <wsdl:input message="tns:WseditarcargoSoapIn" />
+      <wsdl:output message="tns:WseditarcargoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarcargo">
+      <wsdl:input message="tns:eliminarcargoSoapIn" />
+      <wsdl:output message="tns:eliminarcargoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listarempleado">
+      <wsdl:input message="tns:ListarempleadoSoapIn" />
+      <wsdl:output message="tns:ListarempleadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listarempresas">
+      <wsdl:input message="tns:ListarempresasSoapIn" />
+      <wsdl:output message="tns:ListarempresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listardepartamentosxempresa">
+      <wsdl:input message="tns:ListardepartamentosxempresaSoapIn" />
+      <wsdl:output message="tns:ListardepartamentosxempresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadepaN">
+      <wsdl:input message="tns:ListadepaNSoapIn" />
+      <wsdl:output message="tns:ListadepaNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertardep">
+      <wsdl:input message="tns:InsertardepSoapIn" />
+      <wsdl:output message="tns:InsertardepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editardep">
+      <wsdl:input message="tns:editardepSoapIn" />
+      <wsdl:output message="tns:editardepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminardep">
+      <wsdl:input message="tns:eliminardepSoapIn" />
+      <wsdl:output message="tns:eliminardepSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Listacargoxempelado">
+      <soap:operation soapAction="http://tempuri.org/Listacargoxempelado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listacargon">
+      <soap:operation soapAction="http://tempuri.org/Listacargon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsInsertarcargo">
+      <soap:operation soapAction="http://tempuri.org/WsInsertarcargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wseditarcargo">
+      <soap:operation soapAction="http://tempuri.org/Wseditarcargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarcargo">
+      <soap:operation soapAction="http://tempuri.org/eliminarcargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listarempleado">
+      <soap:operation soapAction="http://tempuri.org/Listarempleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listarempresas">
+      <soap:operation soapAction="http://tempuri.org/Listarempresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listardepartamentosxempresa">
+      <soap:operation soapAction="http://tempuri.org/Listardepartamentosxempresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadepaN">
+      <soap:operation soapAction="http://tempuri.org/ListadepaN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertardep">
+      <soap:operation soapAction="http://tempuri.org/Insertardep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editardep">
+      <soap:operation soapAction="http://tempuri.org/editardep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminardep">
+      <soap:operation soapAction="http://tempuri.org/eliminardep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Listacargoxempelado">
+      <soap12:operation soapAction="http://tempuri.org/Listacargoxempelado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listacargon">
+      <soap12:operation soapAction="http://tempuri.org/Listacargon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsInsertarcargo">
+      <soap12:operation soapAction="http://tempuri.org/WsInsertarcargo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Wseditarcargo">
+      <soap12:operation soapAction="http://tempuri.org/Wseditarcargo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarcargo">
+      <soap12:operation soapAction="http://tempuri.org/eliminarcargo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listarempleado">
+      <soap12:operation soapAction="http://tempuri.org/Listarempleado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listarempresas">
+      <soap12:operation soapAction="http://tempuri.org/Listarempresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listardepartamentosxempresa">
+      <soap12:operation soapAction="http://tempuri.org/Listardepartamentosxempresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadepaN">
+      <soap12:operation soapAction="http://tempuri.org/ListadepaN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertardep">
+      <soap12:operation soapAction="http://tempuri.org/Insertardep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editardep">
+      <soap12:operation soapAction="http://tempuri.org/editardep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminardep">
+      <soap12:operation soapAction="http://tempuri.org/eliminardep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:53222/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:53222/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
